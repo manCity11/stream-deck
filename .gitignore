@@ -1,0 +1,15 @@
+# Build output folders
+build/
+dist/
+
+# Dependency directory
+node_modules
+
+# Visual Studio code
+.vscode
+.history
+
+# OSX Files
+.DS_Store
+
+package-lock.json
