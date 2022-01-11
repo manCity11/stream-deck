@@ -3,7 +3,7 @@ build/
 dist/
 
 # Dependency directory
-node_modules
+node_modules/
 
 # Visual Studio code
 .vscode
