@@ -3,11 +3,13 @@ const historyApiFallback = require('connect-history-api-fallback');
 
 const { src, dest } = require('./build-configs/build-config');
 
-const apiServe = () => {
+const apiServe = (cb) => {
   const server = require('gulp-express');
   server.run(src.api.entries);
 
   gulp.watch(src.api.scripts, server.run);
+
+  return cb();
 };
 
 const appServe = (cb) => {
