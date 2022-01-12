@@ -7,5 +7,6 @@ module.exports = {
   rules: {
     'global-require': 0,
     'react/jsx-filename-extension': 0,
+    camelcase: 0,
   },
 };
