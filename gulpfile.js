@@ -5,10 +5,9 @@ const { bundle } = require('./tasks/bundle');
 const { clean } = require('./tasks/clean');
 
 const bundleTask = series(clean, bundle);
-const appserveTask = series(bundleTask, appServe);
 
 exports.lint = scriptsLint;
 exports.apiServe = apiServe;
-exports.appServe = appserveTask;
+exports.appServe = appServe;
 exports.build = bundleTask;
-exports.serve = parallel(apiServe, appserveTask);
+exports.serve = parallel(apiServe, appServe);
