@@ -7,7 +7,9 @@ module.exports = {
       scripts: ['api/**/*.js'],
     },
     app: {
-      entries: ['./src/index.js'],
+      entries: {
+        main: './src/index.js',
+      },
       indexHtml: './src/index.html',
       appPath: path.resolve('src'),
     },
@@ -16,6 +18,9 @@ module.exports = {
         'api/**/*.js',
         'tasks/**/*.js',
         'src/**/*.js',
+      ],
+      styles: [
+        'src/**/*.scss',
       ],
     },
   },
